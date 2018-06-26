@@ -52,4 +52,14 @@ function update() {
   this.input.keyboard.on('keyup_UP', () => {
     this.paddle1.body.velocity.y = 0;
   })
+
+
+  //Paddle 2AI
+  if(this.ball.velocity.y > 0) {
+    this.paddle2.body.velocity.y = paddleSpeed;
+  } else if(this.ball.velocity.y < 0) {
+    this.paddle2.body.velocity.y = -paddleSpeed;
+  } else {
+    this.paddle2.body.velocity.y = 0;
+  }
 }

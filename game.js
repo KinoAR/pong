@@ -55,7 +55,6 @@ function create() {
   this.ball.body.velocity.x = randomFlip() * ballSpeed;
   this.ball.body.velocity.y = -150;
   this.physics.world.on('collide', (collision, initialObject) => {
-    console.log("Collision", collision, initialObject);
     if(collision.body.checkCollision.right === true) {
       initialObject.body.velocity.x = ballSpeed * 1;
       initialObject.body.velocity.y = randomFlip() * 150;
